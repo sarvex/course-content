@@ -16,10 +16,7 @@ def fit_first_stage(T, Z):
     # Fit linear regression model
     stage1.fit(Z, T)
 
-    # Predict T_hat using linear regression model
-    T_hat = stage1.predict(Z)
-
-    return T_hat
+    return stage1.predict(Z)
 
 
 # Uncomment below to test your function

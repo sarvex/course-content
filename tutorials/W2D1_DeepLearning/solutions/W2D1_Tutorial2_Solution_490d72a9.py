@@ -44,8 +44,7 @@ class ConvFC(nn.Module):
     s = s.unsqueeze(1)  # p x 1 x W x H, add a singleton dimension for the single channel
     a = self.conv(s)  # output of convolutional layer
     a = a.view(-1, np.prod(self.dims))  # flatten each convolutional layer output into a vector
-    y = self.out_layer(a)
-    return y
+    return self.out_layer(a)
 
 
 device = torch.device('cpu')

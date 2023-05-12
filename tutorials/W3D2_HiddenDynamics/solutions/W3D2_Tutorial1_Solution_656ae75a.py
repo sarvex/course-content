@@ -19,7 +19,7 @@ def simulate_accuracy_vs_threshold(sigma, threshold_list, num_sample):
   for threshold in threshold_list:
     decision_time_list = []
     decision_list = []
-    for i in range(num_sample):
+    for _ in range(num_sample):
       # run simulation and get decision of current simulation
       _, decision, Mvec = simulate_SPRT_threshold(sigma, threshold)
       decision_time = len(Mvec)

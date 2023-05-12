@@ -17,16 +17,10 @@ class LQR(LDS):
     return L
 
   def calculate_J_state(self, s:np.ndarray):
-    # calculate the state
-    J_state = np.sum((s - self.goal)**2)
-
-    return J_state
+    return np.sum((s - self.goal)**2)
 
   def calculate_J_control(self, a:np.ndarray):
-    # calculate the control
-    J_control = np.sum(a**2)
-
-    return J_control
+    return np.sum(a**2)
 
 
 test_lqr_class(LQR)

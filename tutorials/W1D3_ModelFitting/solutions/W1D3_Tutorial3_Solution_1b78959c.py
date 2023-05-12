@@ -29,4 +29,4 @@ np.random.seed(123)
 
 # Get boostrap estimates
 theta_hats = bootstrap_estimates(x, y, n=2000)
-print(theta_hats[0:5])
+print(theta_hats[:5])

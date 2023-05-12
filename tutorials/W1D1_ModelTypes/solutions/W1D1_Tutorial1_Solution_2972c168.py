@@ -12,11 +12,7 @@ def compute_single_neuron_isis(spike_times, neuron_idx):
   # Extract the spike times for the specified neuron
   single_neuron_spikes = spike_times[neuron_idx]
 
-  # Compute the ISIs for this set of spikes
-  # Hint: the function np.diff computes discrete differences along an array
-  isis = np.diff(single_neuron_spikes)
-
-  return isis
+  return np.diff(single_neuron_spikes)
 
 # Compute ISIs
 single_neuron_isis = compute_single_neuron_isis(spike_times, neuron_idx=283)

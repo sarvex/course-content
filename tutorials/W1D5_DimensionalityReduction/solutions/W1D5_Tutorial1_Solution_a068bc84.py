@@ -15,9 +15,7 @@ def calculate_cov_matrix(var_1, var_2, corr_coef):
   # Calculate the covariance from the variances and correlation
   cov = corr_coef * np.sqrt(var_1 * var_2)
 
-  cov_matrix = np.array([[var_1, cov], [cov, var_2]])
-
-  return cov_matrix
+  return np.array([[var_1, cov], [cov, var_2]])
 
 
 np.random.seed(2020)  # set random seed

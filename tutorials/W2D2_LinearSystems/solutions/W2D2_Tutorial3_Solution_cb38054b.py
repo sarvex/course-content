@@ -16,10 +16,7 @@ def random_walk_simulator(N, T, mu=0, sigma=1):
     # produces a N x T array
     steps = np.random.normal(mu, sigma, size=(N, T))
 
-    # compute the cumulative sum of all the steps over the time axis
-    sim = np.cumsum(steps, axis=1)
-
-    return sim
+    return np.cumsum(steps, axis=1)
 
 np.random.seed(2020) # set random seed
 

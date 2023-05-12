@@ -79,10 +79,7 @@ def train(net, loss_fn, train_data, train_labels,
       else:
         print(f'iteration {i + 1}/{n_iter} | loss: {loss.item():.3f} | test_loss: {loss_test.item():.3f}')
 
-  if test_data is None:
-    return train_loss
-  else:
-    return train_loss, test_loss
+  return train_loss if test_data is None else (train_loss, test_loss)
 
 # Set random seeds for reproducibility
 np.random.seed(1)

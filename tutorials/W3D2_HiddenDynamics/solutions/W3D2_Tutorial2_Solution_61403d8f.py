@@ -10,8 +10,7 @@ def markov_forward(p0, A):
     p1 (numpy vector): the predictive probabilities in next time step
   """
 
-  p1 = A.T @ p0
-  return p1
+  return A.T @ p0
 
 
 # Set random seed

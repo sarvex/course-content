@@ -11,10 +11,7 @@ def F(x, a, theta):
     float: the population activation response F(x) for input x
   """
 
-  # Define the sigmoidal transfer function f = F(x)
-  f = (1 + np.exp(-a * (x - theta)))**-1 - (1 + np.exp(a * theta))**-1
-
-  return f
+  return (1 + np.exp(-a * (x - theta)))**-1 - (1 + np.exp(a * theta))**-1
 
 
 pars = default_pars_single()  # get default parameters

@@ -28,8 +28,8 @@ bnds = ((None, None), (0, None))
 
 # Optimize with scipy!
 optimal_parameters = sp.optimize.minimize(negLogLike, (2, 2), args = x, bounds = bnds)
-print("The optimal mean estimate is: " + str(optimal_parameters.x[0]))
-print("The optimal variance estimate is: " + str(optimal_parameters.x[1]))
+print(f"The optimal mean estimate is: {str(optimal_parameters.x[0])}")
+print(f"The optimal variance estimate is: {str(optimal_parameters.x[1])}")
 
 # optimal_parameters contains a lot of information about the optimization,
 # but we mostly want the mean and variance

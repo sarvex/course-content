@@ -12,10 +12,7 @@ def normalize_vector(input_vector):
   # Compute vector length (use np.linalg.norm)
   vector_length = np.linalg.norm(input_vector)
 
-  # Create normalized vector
-  normalized_vector = input_vector / vector_length
-
-  return normalized_vector
+  return input_vector / vector_length
 
 # Create vector v from above (use np.array)
 v = np.array([4, 1])

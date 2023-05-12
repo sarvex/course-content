@@ -35,4 +35,4 @@ n_groups = 16
 # Uncomment below to test your function
 corr, R, coarse_A = get_coarse_corr(n_groups, X)
 plot_true_vs_estimated_connectivity(R, coarse_A)
-print("Correlation: {}".format(corr))
+print(f"Correlation: {corr}")

@@ -28,11 +28,7 @@ def simulate_SPRT_threshold(sigma, threshold , true_dist=1):
 
   # Keep sampling data until threshold is crossed
   while not has_enough_data:
-    if true_dist == 1:
-      Mvec = pR.rvs()
-    else:
-      Mvec = pL.rvs()
-
+    Mvec = pR.rvs() if true_dist == 1 else pL.rvs()
     # individual log likelihood ratios
     ll_ratio = log_likelihood_ratio(Mvec, pL, pR)
     # cumulated evidence for this chunk

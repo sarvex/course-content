@@ -10,8 +10,7 @@ def one_step_update(model, posterior_tm1, Y_t):
   """
   prediction = model.transmat_ @ posterior_tm1
   likelihood = np.exp(model._compute_log_likelihood(Y_t))
-  posterior_t = prediction * likelihood
-  return posterior_t
+  return prediction * likelihood
 
 
 np.random.seed(101)
@@ -22,7 +21,7 @@ T = 160
 model = create_HMM(switch_prob, noise_level)
 
 posterior_list = []
-for i in range(nsample):
+for _ in range(nsample):
   predictive_probs, posterior_probs = simulate_forward_inference(model, T)
   posterior_list.append(posterior_probs)
 posterior_matrix = np.asarray(posterior_list)

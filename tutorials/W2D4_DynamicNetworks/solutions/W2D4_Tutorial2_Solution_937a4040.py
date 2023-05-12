@@ -9,10 +9,7 @@ def F_inv(x, a, theta):
     F_inverse : value of the inverse function
   """
 
-  # Calculate Finverse (ln(x) can be calculated as np.log(x))
-  F_inverse = -1/a * np.log((x + (1 + np.exp(a * theta))**-1)**-1 - 1) + theta
-
-  return F_inverse
+  return -1/a * np.log((x + (1 + np.exp(a * theta))**-1)**-1 - 1) + theta
 
 pars = default_pars()
 x = np.linspace(1e-6, 1, 100)

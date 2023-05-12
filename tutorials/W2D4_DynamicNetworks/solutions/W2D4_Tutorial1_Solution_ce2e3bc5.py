@@ -11,10 +11,7 @@ def dF(x, a, theta):
     dFdx  : the population activation response F(x) for input x
   """
 
-  # Calculate the population activation
-  dFdx = a * np.exp(-a * (x - theta)) * (1 + np.exp(-a * (x - theta)))**-2
-
-  return dFdx
+  return a * np.exp(-a * (x - theta)) * (1 + np.exp(-a * (x - theta)))**-2
 
 
 pars = default_pars_single()  # get default parameters

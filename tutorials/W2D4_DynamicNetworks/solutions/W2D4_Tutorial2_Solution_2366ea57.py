@@ -10,10 +10,7 @@ def get_E_nullcline(rE, a_E, theta_E, wEE, wEI, I_ext_E, **other_pars):
   Returns:
     rI    : values of inhibitory population along the nullcline on the rE
   """
-  # calculate rI for E nullclines on rI
-  rI = 1 / wEI * (wEE * rE - F_inv(rE, a_E, theta_E) + I_ext_E)
-
-  return rI
+  return 1 / wEI * (wEE * rE - F_inv(rE, a_E, theta_E) + I_ext_E)
 
 
 def get_I_nullcline(rI, a_I, theta_I, wIE, wII, I_ext_I, **other_pars):
@@ -28,10 +25,7 @@ def get_I_nullcline(rI, a_I, theta_I, wIE, wII, I_ext_I, **other_pars):
   Returns:
     rE    : values of the excitatory population along the nullcline on the rI
   """
-  # calculate rE for I nullclines on rI
-  rE = 1 / wIE * (wII * rI + F_inv(rI, a_I, theta_I) - I_ext_I)
-
-  return rE
+  return 1 / wIE * (wII * rI + F_inv(rI, a_I, theta_I) - I_ext_I)
 
 
 pars = default_pars()

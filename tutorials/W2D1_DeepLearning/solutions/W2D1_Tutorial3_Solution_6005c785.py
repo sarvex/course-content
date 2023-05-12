@@ -12,10 +12,7 @@ def RDM(resp):
   # z-score responses to each stimulus
   zresp = zscore(resp, axis=1)
 
-  # Compute RDM
-  RDM = 1 - (zresp @ zresp.T) / zresp.shape[1]
-
-  return RDM
+  return 1 - (zresp @ zresp.T) / zresp.shape[1]
 
 # Compute RDMs
 rdm_dict = {label: RDM(resp) for label, resp in resp_dict.items()}

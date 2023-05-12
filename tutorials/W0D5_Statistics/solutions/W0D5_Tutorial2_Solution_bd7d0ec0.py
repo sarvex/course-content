@@ -15,10 +15,7 @@ def compute_likelihood_normal(x, mean_val, standard_dev_val):
   # Get probability of each data point (use norm.pdf from scipy stats)
   p_data = norm.pdf(x, mean_val, standard_dev_val)
 
-  # Compute likelihood (sum over the log of the probabilities)
-  likelihood = np.sum(np.log(p_data))
-
-  return likelihood
+  return np.sum(np.log(p_data))
 
 # Set random seed
 np.random.seed(0)

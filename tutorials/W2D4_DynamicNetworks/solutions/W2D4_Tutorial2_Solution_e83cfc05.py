@@ -19,9 +19,7 @@ def get_eig_Jacobian(fp,
   J[1, 1] = (-1 - wII * dF(wIE * rE - wII * rI + I_ext_I,
                            a_I, theta_I)) / tau_I
 
-  # Compute and return the eigenvalues
-  evals = np.linalg.eig(J)[0]
-  return evals
+  return np.linalg.eig(J)[0]
 
 
 eig_1 = get_eig_Jacobian(x_fp_1, **pars)

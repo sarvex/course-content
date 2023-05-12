@@ -11,10 +11,7 @@ def get_dGdE(fp, tau_E, a_E, theta_E, wEE, wEI, I_ext_E, **other_pars):
   """
   rE, rI = fp
 
-  # Calculate the J[0,0]
-  dGdrE = (-1 + wEE * dF(wEE * rE - wEI * rI + I_ext_E, a_E, theta_E)) / tau_E
-
-  return dGdrE
+  return (-1 + wEE * dF(wEE * rE - wEI * rI + I_ext_E, a_E, theta_E)) / tau_E
 
 
 pars = default_pars()
@@ -26,7 +23,7 @@ dGdrE1 = get_dGdE(x_fp_1, **pars)
 dGdrE2 = get_dGdE(x_fp_2, **pars)
 dGdrE3 = get_dGdE(x_fp_3, **pars)
 
-print(f'For the default case:')
+print('For the default case:')
 print(f'dG/drE(fp1) = {dGdrE1:.3f}')
 print(f'dG/drE(fp2) = {dGdrE2:.3f}')
 print(f'dG/drE(fp3) = {dGdrE3:.3f}')

@@ -11,10 +11,7 @@ def solve_normal_eqn(x, y):
     float: the value for theta_hat arrived from minimizing MSE
   """
 
-  # Compute theta_hat analytically
-  theta_hat = (x.T @ y) / (x.T @ x)
-
-  return theta_hat
+  return (x.T @ y) / (x.T @ x)
 
 
 theta_hat = solve_normal_eqn(x, y)

@@ -13,11 +13,7 @@ def reconstruct_data(score, evectors, X_mean, K):
 
   """
 
-  # Reconstruct the data from the score and eigenvectors
-  # Don't forget to add the mean!!
-  X_reconstructed =  np.matmul(score[:, :K], evectors[:, :K].T) + X_mean
-
-  return X_reconstructed
+  return np.matmul(score[:, :K], evectors[:, :K].T) + X_mean
 
 
 K = 784

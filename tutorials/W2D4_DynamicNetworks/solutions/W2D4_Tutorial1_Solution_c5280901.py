@@ -9,10 +9,7 @@ def compute_drdt(r, I_ext, w, a, theta, tau, **other_pars):
   Returns
     drdt function for each value of r
   """
-  # Calculate drdt
-  drdt = (-r + F(w * r + I_ext, a, theta)) / tau
-
-  return drdt
+  return (-r + F(w * r + I_ext, a, theta)) / tau
 
 
 # Define a vector of r values and the simulation parameters

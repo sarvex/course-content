@@ -17,9 +17,7 @@ def correlate_rdms(rdm1, rdm2):
   rdm1_offdiag = rdm1[ioffdiag]
   rdm2_offdiag = rdm2[ioffdiag]
 
-  corr_coef = np.corrcoef(rdm1_offdiag, rdm2_offdiag)[0,1]
-
-  return corr_coef
+  return np.corrcoef(rdm1_offdiag, rdm2_offdiag)[0,1]
 
 
 # Split RDMs into V1 responses and model responses

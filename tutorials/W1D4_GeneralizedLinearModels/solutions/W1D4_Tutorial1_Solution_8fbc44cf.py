@@ -17,8 +17,7 @@ def predict_spike_counts_lnp(stim, spikes, theta=None, d=25):
   if theta is None:  # Allow pre-cached weights, as fitting is slow
     theta = fit_lnp(X, y, d)
 
-  yhat = np.exp(X @ theta)
-  return yhat
+  return np.exp(X @ theta)
 
 yhat = predict_spike_counts_lnp(stim, spikes, theta_lnp)
 with plt.xkcd():

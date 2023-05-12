@@ -11,9 +11,7 @@ def update_action_value(q, action, reward, alpha):
   Returns:
     float: the updated value for the selected action
   """
-  # write an expression for the updated action value
-  value = q[action] + alpha * (reward - q[action])
-  return value
+  return q[action] + alpha * (reward - q[action])
 
 
 q = [-2, 5, 0, 1]

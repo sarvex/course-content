@@ -46,9 +46,7 @@ def my_Bayes_model_mse(params):
         marginal_nonzero = marginal[idx] + np.finfo(float).eps  # avoid log(0)
         trial_ll[i_stim] = np.log(marginal_nonzero)
 
-    neg_ll = - trial_ll.sum()
-
-    return neg_ll
+    return - trial_ll.sum()
 
 with plt.xkcd():
   plot_my_bayes_model(my_Bayes_model_mse)

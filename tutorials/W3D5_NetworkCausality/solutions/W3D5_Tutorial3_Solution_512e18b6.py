@@ -23,9 +23,7 @@ def get_regression_estimate(X, neuron_idx):
     # Fit regression to the data
     regression.fit(W, Y)
 
-    V = regression.coef_
-
-    return V
+    return regression.coef_
 
 # Parameters
 n_neurons = 50  # the size of our system

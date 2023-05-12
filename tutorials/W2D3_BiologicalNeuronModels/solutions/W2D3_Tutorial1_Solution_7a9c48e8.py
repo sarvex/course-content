@@ -24,9 +24,9 @@ def run_LIF(pars, Iinj, stop=False):
   v = np.zeros(Lt)
   v[0] = V_init
   Iinj = Iinj * np.ones(Lt)
-  if stop:  # set end of current to 0 if current pulse
-    Iinj[:int(len(Iinj) / 2) - 1000] = 0
-    Iinj[int(len(Iinj) / 2) + 1000:] = 0
+  if stop:# set end of current to 0 if current pulse
+    Iinj[:len(Iinj) // 2 - 1000] = 0
+    Iinj[len(Iinj) // 2 + 1000:] = 0
   tr = 0.  # the count for refractory duration
 
   # Simulate the LIF dynamics

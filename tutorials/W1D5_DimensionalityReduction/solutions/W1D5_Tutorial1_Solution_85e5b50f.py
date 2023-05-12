@@ -16,9 +16,7 @@ def define_orthonormal_basis(u):
   # calculate vector w that is orthogonal to w
   w = np.array([-u[1], u[0]])
 
-  W = np.column_stack([u, w])
-
-  return W
+  return np.column_stack([u, w])
 
 
 np.random.seed(2020)  # set random seed

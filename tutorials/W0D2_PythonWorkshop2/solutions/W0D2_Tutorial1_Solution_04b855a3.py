@@ -27,14 +27,22 @@ with plt.xkcd():
   plt.xlabel('$V_m$ (V)')
 
   # Plot a histogram at t_max/10 (add labels and parameters histtype='stepfilled' and linewidth=0)
-  plt.hist(v_n[:,int(step_end / 10)], nbins,
-            histtype='stepfilled', linewidth=0,
-            label = 't='+ str(t_max / 10) + 's')
+  plt.hist(
+      v_n[:, step_end // 10],
+      nbins,
+      histtype='stepfilled',
+      linewidth=0,
+      label=f't={str(t_max / 10)}s',
+  )
 
   # Plot a histogram at t_max (add labels and parameters histtype='stepfilled' and linewidth=0)
-  plt.hist(v_n[:, -1], nbins,
-            histtype='stepfilled', linewidth=0,
-            label = 't='+ str(t_max) + 's')
+  plt.hist(
+      v_n[:, -1],
+      nbins,
+      histtype='stepfilled',
+      linewidth=0,
+      label=f't={str(t_max)}s',
+  )
   # Add legend
   plt.legend()
   plt.show()

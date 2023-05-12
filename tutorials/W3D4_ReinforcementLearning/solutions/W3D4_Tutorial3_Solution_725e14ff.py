@@ -16,11 +16,7 @@ def q_learning(state, action, reward, next_state, value, params):
   q = value[state, action]
 
   # write an expression for finding the maximum Q-value at the current state
-  if next_state is None:
-    max_next_q = 0
-  else:
-    max_next_q = np.max(value[next_state])
-
+  max_next_q = 0 if next_state is None else np.max(value[next_state])
   # write the expression to compute the TD error
   td_error = reward + params['gamma'] * max_next_q - q
   # write the expression that updates the Q-value for the state-action pair

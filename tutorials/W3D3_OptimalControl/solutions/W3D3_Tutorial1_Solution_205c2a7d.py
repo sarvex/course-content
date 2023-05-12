@@ -14,9 +14,6 @@ def value_function(measurement, act, cost_sw):
   """
   act_int = (act == "switch").astype(int)
   T = len(measurement)
-  # Calculate the value function
-  value = np.sum(measurement - act_int * cost_sw) / T
-
-  return value
+  return np.sum(measurement - act_int * cost_sw) / T
 
 test_value_function()

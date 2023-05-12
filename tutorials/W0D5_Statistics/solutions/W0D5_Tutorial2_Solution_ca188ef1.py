@@ -9,4 +9,6 @@ p0 = np.array([0, 1, 0])
 p4 = p0 @ np.linalg.matrix_power(transition_matrix, 4)
 
 # The second area is indexed as 1 (Python starts indexing at 0)
-print("The probability the rat will be in area 2 after 4 transitions is: " + str(p4[1]))
+print(
+    f"The probability the rat will be in area 2 after 4 transitions is: {str(p4[1])}"
+)

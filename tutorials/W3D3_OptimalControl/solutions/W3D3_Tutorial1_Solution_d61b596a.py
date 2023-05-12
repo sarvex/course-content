@@ -14,15 +14,7 @@ def policy_threshold(threshold, belief, loc):
   Returns:
     act (string): "stay" or "switch"
   """
-  # Write the if statement
-  if belief[(loc + 1) // 2] <= threshold:
-    # action below threshold
-    act = "switch"
-  else:
-    # action above threshold
-    act = "stay"
-
-  return act
+  return "switch" if belief[(loc + 1) // 2] <= threshold else "stay"
 
 
 test_policy_threshold()

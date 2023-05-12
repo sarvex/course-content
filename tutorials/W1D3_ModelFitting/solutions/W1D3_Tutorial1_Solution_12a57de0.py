@@ -14,10 +14,7 @@ def mse(x, y, theta_hat):
   # Compute the estimated y
   y_hat = theta_hat * x
 
-  # Compute mean squared error
-  mse = np.mean((y - y_hat)**2)
-
-  return mse
+  return np.mean((y - y_hat)**2)
 
 
 theta_hats = [0.75, 1.0, 1.5]

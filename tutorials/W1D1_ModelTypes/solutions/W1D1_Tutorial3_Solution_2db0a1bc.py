@@ -1,7 +1,6 @@
 def pmf_from_counts(counts):
   """Given counts, normalize by the total to estimate probabilities."""
-  pmf = counts / np.sum(counts)
-  return pmf
+  return counts / np.sum(counts)
 
 
 # Get neuron index

@@ -15,7 +15,7 @@ def td_learner(env, n_trials, gamma=0.98, alpha=0.001):
 
   for n in range(n_trials):
     state = 0 # Initial state
-    for t in range(env.n_steps):
+    for _ in range(env.n_steps):
       # Get next state and next reward
       next_state, reward = env.get_outcome(state)
       # Is the current state in the delay period (after CS)?
